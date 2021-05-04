@@ -250,9 +250,7 @@ The `env` variable also contains the following information:
 * `ver_id` - git ID or `release` if not a git build
 * `hostname` - local hostname
 
-You can also add values, not merely plain strings but any Lua objects, like tables, by specifying additional environment files with the `--lua-env` command line argument. The specified Lua program file will be read by the `root` user if the Rspamd main process starts as root and then drops privileges.
-<!-- TG - Not understanding the following statement (revised from original for language clarity) -->
-The Lua program file (or files) when specified multiple times should return a table as a single possible outcome. For example:
+You can also add values, not merely plain strings but any Lua objects, like [tables](https://www.lua.org/pil/2.5.html), by specifying additional environment files with the `--lua-env` command line argument. The specified Lua program file will be read by the `root` user if the Rspamd main process starts as root and then drops privileges. The Lua program file (or files) when specified multiple times should return a table as a single possible outcome. For example:
 
 ```lua
 return {
